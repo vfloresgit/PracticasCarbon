@@ -10,4 +10,7 @@ class RamaController extends Controller
     public function holarama(){
     	echo "hola rama";
     }
+    public function holaprueba2(){
+    	
+    }
 }
