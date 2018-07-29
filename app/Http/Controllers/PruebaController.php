@@ -10,4 +10,10 @@ class PruebaController extends Controller
     public function hola(){
     	echo "hola";
     }
+
+
+    public function getAll(){
+    	
+    }
+
 }
