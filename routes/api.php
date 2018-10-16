@@ -19,3 +19,19 @@ use Illuminate\Http\Request;
 Route::post('/meses/asignar',[
     'uses'  => 'FaseController@asignar'
 ]);
+
+Route::post('/SubirAchivos',[
+    'uses'  => 'ArchivoController@subir'
+]);
+
+Route::get('/comentarios/adjunto/{adjunto}/nombre/{nombre}', function ($nombre_original, $nombre_etiqueta) {
+    return response()->download(storage_path("app/public/comentarios/{$nombre_original}"),$nombre_etiqueta);
+});
+
+Route::get('/comentarios/adjunto/{adjunto}/nombre/{nombre}', function ($nombre_original, $nombre_etiqueta) {
+   return response()->download(storage_path("app/public/victor/{$nombre_original}"),$nombre_etiqueta);
+});
+
+Route::get('/download',[
+    'uses'  => 'ArchivoController@download'
+]);
